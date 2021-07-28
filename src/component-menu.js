@@ -10,7 +10,7 @@ class MyMenu extends LitElement{
                 height:100vh;
             }
             .menu{
-                background-color:yellow;
+                background-color:grey;
                 text-align:center;
                 border: 4px solid;
                 float:left;
@@ -26,24 +26,49 @@ class MyMenu extends LitElement{
                 height: 32.5%;
                 background-color: #6A737C;
                 margin: 1% 1%;
+                line-height: 200px;
               }
         `;
     }
 
+    static get properties() {
+        return {
+            uno: { type: String },
+            dos: { type: String },
+            tre: { type: String }
+        };
+    }
+    /* constructor(){
+        super();
+        this.uno = '';
+        this.dos = '';
+        this.tre = '';
+    } */
+
     render(){
         return html`
             <div class="menu">
-                <div class="contenedor">
-                    UNO
+                <div class="contenedor" @click="${this.pagina}">
+                    ${this.uno}  UNO
                 </div>
-                <div class="contenedor">
-                    DOS
+                <div class="contenedor" @click="${this.paginaDos}">
+                    ${this.dos}  DOS
                 </div>
-                <div class="contenedor">
-                    TRES
+                <div class="contenedor" @click="${this.paginaTres}">
+                    ${this.tre}TRES
                 </div>
             </div>
         `;
     }
+    pagina(){
+        this.uno = 'soy pagina';
+    }
+    paginaDos(){
+        this.dos = 'soy pagina';
+    }
+    paginaTres(){
+        this.tre = 'soy pagina';
+    }
+
 }
 customElements.define('component-menu',MyMenu);

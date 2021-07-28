@@ -11,8 +11,9 @@ class MyHeader extends LitElement{
         .menu{
             text-align: center;
             padding: 35px;
-            background-color: blue;
+            background-color: grey;
             border: 4px solid;
+            font-size: 20px;
         }
          
         @media only screen and(max-width: 620){
@@ -28,7 +29,7 @@ class MyHeader extends LitElement{
     render(){
         return html`
             <div class="menu">
-                header
+                Componente Header
             </div>
         `;
     }

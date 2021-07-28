@@ -6,29 +6,32 @@ class MyPagina extends LitElement{
         return css`
             *{
                 box-sizing: border-box;
-                height:100vh;
-                display: flex;
+                height:100vh;     
             }
             .pagina{
-                background-color: green;
+                background-color: grey;
                 border: 4px solid;
                 text-align: center;
                 float:left;
                 width:70%;
-            }
+                font-size: 20px;
+                line-height: 500px;
+            } 
 
             @media only screen and(max-width: 620){
                 .menu, .pagina{
                     width: 100%;
                 }
             }
+
+
         `;
     }
 
     render(){
         return html`
             <div class="pagina">
-                pagina
+                Componente de la Pagina
             </div>
         `;
     }
