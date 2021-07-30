@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script type="module" src="./src/index.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="grid-container">
 
-    <component-header></component-header>
-    <component-menu></component-menu>
-    <component-pagina></component-pagina>
-    
+    <header class="header"><component-header></component-header></header>
+    <nav class="navbar"><component-menu></component-menu></nav>
+    <article class="main"><component-pagina></component-pagina></article> 
 </body>
 </html>
