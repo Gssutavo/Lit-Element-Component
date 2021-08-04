@@ -1,58 +1,32 @@
 import { css, html, LitElement } from "lit-element";
-import './component-pagina'
-import './component-page'
+/* import './component-pagina'
+import './paginas/component-page' */
 class MyMenu extends LitElement{
 
     static get styles(){
         return css`
         `;
     }
-   /*  static get properties() {
-        return {
-            uno: { type: String },
-            dos: { type: String },
-            tre: { type: String }
-        };
-    } */
-
+ 
     constructor(){
         super();
     }
     render(){
         return html`
-            <div class="menu" id="page">
-                <div class="contenedor" @click="${this.pagina}">
-                    UNO
-                </div>
-                <!-- <div class="contenedor" @click="${this.paginaDos}">
-                    ${this.dos}  DOS
-                </div>
-                <div class="contenedor" @click="${this.paginaTres}">
-                    ${this.tre}TRES
-                </div> -->
+            <div>
+                <component-link to="/default">
+                    <component-button texto="pagina 1"></component-button>
+                </component-link>
+
+                <component-link to="/pagina_2">
+                    <component-button texto="pagina 2"></component-button>   
+                </component-link>
+                
+                <component-link to="/pagina_3">
+                    <component-button texto="pagina 3"></component-button>
+                </component-link>
             </div>
         `;
     }
-    pagina(){
-        let contendor = this.shadowRoot.getElementById('page');
-        this.shadowRoot.querySelector('component-page');
-        contendor.innerHTML="<component-page></component-page>";
-    }
-   /*  paginaDos(){
-
-    }
-    paginaTres(){
-
-    } */
-    /* pagina(){
-        this.uno = 'soy pagina';
-    }    
-    paginaDos(){
-        this.dos = 'soy pagina';
-    }
-    paginaTres(){
-        this.tre = 'soy pagina';
-    } */
-
 }
 customElements.define('component-menu',MyMenu);

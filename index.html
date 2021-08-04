@@ -12,6 +12,22 @@
 
     <header class="header"><component-header></component-header></header>
     <nav class="navbar"><component-menu></component-menu></nav>
-    <article class="main"><component-pagina></component-pagina></article> 
+    <article class="main">
+        <component-router>
+            <component-viewport>
+                <component-route path="/default">
+                    <h1>soy pagina por default</h1>
+                    <component-page></component-page>
+                </component-route>
+                <component-route path="/pagina_2">
+                    <h1>soy pagina Dos</h1>
+                    <component-dos></component-dos>
+                </component-route>
+                <component-route path="/pagina_3">
+                    <component-tres></component-tres>
+                </component-route>
+            </component-viewport>
+        </component-router>
+    </article>
 </body>
 </html>

@@ -17,7 +17,7 @@ class MyPage extends LitElement{
     render(){
         return html`
             <div>
-                Mensaje 2
+                Default
             </div>
         `;
     }
