@@ -16,9 +16,9 @@ class MyPage extends LitElement{
 
     render(){
         return html`
-            <div>
-                Default
-            </div>
+            <h1>
+                Soy componente Default
+            </h1>
         `;
     }
 }

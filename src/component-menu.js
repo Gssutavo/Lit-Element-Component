@@ -1,10 +1,12 @@
 import { css, html, LitElement } from "lit-element";
-/* import './component-pagina'
-import './paginas/component-page' */
+
 class MyMenu extends LitElement{
 
     static get styles(){
         return css`
+            .left{
+                float: left;
+            }
         `;
     }
  
@@ -13,7 +15,7 @@ class MyMenu extends LitElement{
     }
     render(){
         return html`
-            <div>
+            <div class="left">
                 <component-link to="/default">
                     <component-button texto="pagina 1"></component-button>
                 </component-link>
@@ -21,7 +23,7 @@ class MyMenu extends LitElement{
                 <component-link to="/pagina_2">
                     <component-button texto="pagina 2"></component-button>   
                 </component-link>
-                
+
                 <component-link to="/pagina_3">
                     <component-button texto="pagina 3"></component-button>
                 </component-link>

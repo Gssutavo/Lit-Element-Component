@@ -11,8 +11,8 @@ class Link extends LitElement{
     
     _handlerClick(){
         let detail = {
-            to:this.to,
-            routerName:this.routerName
+            to: this.to,
+            routerName: this.routerName
         };
         this.dispatchEvent(new CustomEvent('goEvent', { detail:detail,bubbles:true,composed:true}));
     }
